@@ -3,83 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>✧ ไทม์ไลน์แห่งพระเจ้า ✧</title>
+    <title>✧ ศาสตราแห่งแสง ✧</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Sarabun:wght@200&display=swap" rel="stylesheet">
+    
     <style>
-        :root {
-            --abyss: #050a10;
-            --starlight: #ffffff;
-            --royal-gold: #efd38c;
-            --ethereal-blue: rgba(100, 150, 255, 0.2);
-        }
-
         body {
             margin: 0;
-            background: radial-gradient(circle at center, #0f172a 0%, var(--abyss) 100%);
-            color: var(--royal-gold);
+            /* พื้นหลังสีน้ำเงินเข้มเกือบดำเพื่อให้สีทองเด่น */
+            background: #020408; 
+            color: #efd38c;
             font-family: 'Cinzel', serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             overflow: hidden;
-            letter-spacing: 2px;
         }
 
-        /* เอฟเฟกต์แสงออร่ารอบตัวอักษร */
-        .glowing-text {
+        .container {
             text-align: center;
-            position: relative;
+            padding: 20px;
         }
 
         h1 {
-            font-size: 4rem;
-            font-weight: 300;
+            /* ปรับขนาดให้ใหญ่และหนาขึ้น */
+            font-size: clamp(3rem, 10vw, 6rem); 
+            font-weight: 700;
             margin: 0;
             text-transform: uppercase;
-            background: linear-gradient(to bottom, #ffffff 0%, var(--royal-gold) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 0 15px rgba(239, 211, 140, 0.5));
-            animation: pulse 5s ease-in-out infinite;
+            color: #ffffff; /* สีขาวหลัก */
+            /* ใส่ขอบฟุ้งๆ หลายชั้นให้ดูเรืองแสง */
+            text-shadow: 
+                0 0 10px rgba(239, 211, 140, 0.8),
+                0 0 20px rgba(239, 211, 140, 0.5),
+                0 0 40px rgba(239, 211, 140, 0.3);
+            letter-spacing: 15px;
         }
 
-        /* ขีดเส้นใต้หรูๆ */
-        .divider {
-            width: 0;
-            height: 1px;
-            background: linear-gradient(to right, transparent, var(--royal-gold), transparent);
-            margin: 15px auto;
-            animation: expand 2s ease-out forwards;
-        }
-
-        p {
-            font-size: 0.9rem;
-            color: var(--starlight);
-            opacity: 0.6;
+        .subtitle {
+            font-family: 'Sarabun', sans-serif;
+            color: #efd38c;
+            letter-spacing: 5px;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            opacity: 0.8;
             text-transform: uppercase;
-            letter-spacing: 8px;
         }
 
-        /* อนิเมชั่นการเต้นของแสง */
-        @keyframes pulse {
-            0%, 100% { opacity: 0.8; filter: drop-shadow(0 0 10px rgba(239, 211, 140, 0.3)); }
-            50% { opacity: 1; filter: drop-shadow(0 0 25px rgba(239, 211, 140, 0.7)); }
-        }
-
-        @keyframes expand {
-            from { width: 0; }
-            to { width: 300px; }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="glowing-text">
-        <p>— Awakening —</p>
-        <h1>Hello World</h1>
-        <div class="divider"></div>
-        <p style="font-size: 0.7rem; letter-spacing: 3px;">จักรวาลนี้ถูกจารึกไว้ด้วยนามของคุณ</p>
-    </div>
-
-</body>
-</html>
+        .line {
+            width: 100px;
+            height: 2px;
+            background: #efd38c;
+            margin: 20px auto;
+            box-
