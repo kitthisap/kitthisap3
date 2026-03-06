@@ -3,50 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>❖ อาณาจักรแห่งนิรันดร์ ❖</title>
+    <title>✧ ไทม์ไลน์แห่งพระเจ้า ✧</title>
     <style>
         :root {
-            --dark-void: #0a0a0b;
-            --blood-moon: #8b0000;
-            --noble-gold: #d4af37;
-            --shadow-text: rgba(212, 175, 55, 0.3);
+            --abyss: #050a10;
+            --starlight: #ffffff;
+            --royal-gold: #efd38c;
+            --ethereal-blue: rgba(100, 150, 255, 0.2);
         }
 
         body {
             margin: 0;
-            padding: 0;
-            background-color: var(--dark-void);
-            color: var(--noble-gold);
-            font-family: 'Palatino', 'Cinzel', serif;
+            background: radial-gradient(circle at center, #0f172a 0%, var(--abyss) 100%);
+            color: var(--royal-gold);
+            font-family: 'Cinzel', serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             overflow: hidden;
-            background-image: 
-                radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+            letter-spacing: 2px;
         }
 
-        .container {
+        /* เอฟเฟกต์แสงออร่ารอบตัวอักษร */
+        .glowing-text {
             text-align: center;
             position: relative;
         }
 
-        /* เอฟเฟกต์ตัวอักษรแบบวิญญาณ */
         h1 {
-            font-size: 5rem;
-            letter-spacing: 0.5rem;
-            text-transform: uppercase;
+            font-size: 4rem;
+            font-weight: 300;
             margin: 0;
-            position: relative;
-            animation: float 4s ease-in-out infinite;
-            text-shadow: 0 0 20px var(--shadow-text);
+            text-transform: uppercase;
+            background: linear-gradient(to bottom, #ffffff 0%, var(--royal-gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 15px rgba(239, 211, 140, 0.5));
+            animation: pulse 5s ease-in-out infinite;
         }
 
-        h1::before {
-            content: "HELLØ WRLD";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height:
+        /* ขีดเส้นใต้หรูๆ */
+        .divider {
+            width: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--royal-gold), transparent);
+            margin: 15px auto;
+            animation: expand 2s ease-out forwards;
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: var(--starlight);
+            opacity: 0.6;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+        }
+
+        /* อนิเมชั่นการเต้นของแสง */
+        @keyframes pulse {
+            0%, 100% { opacity: 0.8; filter: drop-shadow(0 0 10px rgba(239, 211, 140, 0.3)); }
+            50% { opacity: 1; filter: drop-shadow(0 0 25px rgba(239, 211, 140, 0.7)); }
+        }
+
+        @keyframes expand {
+            from { width: 0; }
+            to { width: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glowing-text">
+        <p>— Awakening —</p>
+        <h1>Hello World</h1>
+        <div class="divider"></div>
+        <p style="font-size: 0.7rem; letter-spacing: 3px;">จักรวาลนี้ถูกจารึกไว้ด้วยนามของคุณ</p>
+    </div>
+
+</body>
+</html>
