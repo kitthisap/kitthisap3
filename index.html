@@ -1,11 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    Hello wrold
-</body>
-</html>
+    <title>❖ อาณาจักรแห่งนิรันดร์ ❖</title>
+    <style>
+        :root {
+            --dark-void: #0a0a0b;
+            --blood-moon: #8b0000;
+            --noble-gold: #d4af37;
+            --shadow-text: rgba(212, 175, 55, 0.3);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-void);
+            color: var(--noble-gold);
+            font-family: 'Palatino', 'Cinzel', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            background-image: 
+                radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+        }
+
+        /* เอฟเฟกต์ตัวอักษรแบบวิญญาณ */
+        h1 {
+            font-size: 5rem;
+            letter-spacing: 0.5rem;
+            text-transform: uppercase;
+            margin: 0;
+            position: relative;
+            animation: float 4s ease-in-out infinite;
+            text-shadow: 0 0 20px var(--shadow-text);
+        }
+
+        h1::before {
+            content: "HELLØ WRLD";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height:
